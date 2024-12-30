@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"/>
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Dolce Sabry - Delicatessen</title>
+</head>
+
+<body>
+
+   <header>
+    <a class="navbar-brand">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMNzppzP8x_piDylR668-_G1N5X0MeaXQCfafeAnawoel_mlHQw1UzJoztWbuaNTnK9coH52SThCy6guIa5IydKM3v76xYp5nYDDo-EL5R-RmyEctGXZTxreP4E8Co0Tvga7xSXbfbtWRuGaxvQmEcp=w573-h151-s-no?authuser=0" alt="logo Dolce Sabry Bakery" style= "height: 50px;">
+      </a>
+      
+      <nav>
+         <ul>
+            <li>
+               <a href="./index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="./pages/contacto.html" target="_blank">Contacto</a>
+            </li>
+            <li>
+                <a href="./pages/productos.html" onclick="handleCart()">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                         d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85" />
+                   </svg>
+                   <div class="count"></div>
+                </a>
+             </li>
+         </ul>
+      </nav>
+   </header>
+
+
+
+   <!-- CARROUSEL -->
+          
+   <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carrousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" >
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczNwzmNApRMeAG6Boo0y3SXwmGrmCnuRJd9kHZr8lpXFfyVZWSCP_45faIN737kp7X6lViG8DPfuPj_enB4_9LFrRpNZdgKzF-Iuy-iZeIlXV0cDFR4CF3QLd2aa5kQYU8nv9kQ70gSj0YpoNOs4qYFy=w1006-h295-s-no?authuser=0" class="d-block w-100" alt="Pudding con chocolate">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pudding de Chocolate</h5>
+          <p>Un postre elegante y sofisticado; ideal para eventos exclusivos</p>
+        </div>
+      </div>
+      
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOsGRYO8RCyE1Llf118OVHLcIkyPEHhCuaSDNBvyOt2t6rP0VTZj7r1kCoGhekUQhhEdLa0jpcRxM4-gr-j5scjNOB2-TNa09pSbTPHF7xGirlEh37dK-6GeXxMjmjgHN05smOik5T5i8OLNkTuigOg=w1006-h295-s-no?authuser=0" class="d-block w-100" alt="Key Lime Pie torta">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Key Lime Pie</h5>
+          <p>Fresco y Liviano.  Opción ideal para un día al aire libre</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPLc0qBLVl9sLNM3BMlF8coqe_uFZib45UjLvybFdC0LBuiIAi4GV53Xo0WN6rgiK7Zm8goS11VMDkvUxhFqxf_uPZwp2X5_b09xv97nLo5D1mRZQxZDJAN-AgaHJ_3pBUSHqYmlXDxCkUmFRivXhYd=w1006-h295-s-no?authuser=0" class="d-block w-100" alt="Red Velvet Torta">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Red velvet Cake</h5>
+          <p>En meriendas o desayunos empresariales, no puede faltar</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente </span>
+    </button>
+  </div></main>
+
+
+   <section id="products" >
+      <h2>Sección de Productos</h2>
+      <div class="container">
+       
+         <div class="card">
+            <a href="./pages/producto.html">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczP0MGgLr7pwDJd94YD9spY2m0Nq5kXGXCEcC2pkMMuqeKzPuBVYK5uDtn-xWnMutgi2wlt1Vz2SNI6QxaHaBW-rrrZPmxpfJk0CpDroZJ8TvSJohgaHgKXwC-uqCNQ6mZqbfidjL-CRGt4bDCf-_88L=w400-h320-s-no?authuser=0" class="card-img-top" alt="Tarta de Frutos Rojos">
+               <div class="item">
+                  <h3>Tarta de Frutos Rojos</h3>
+                  <p class="description">Masa de Tarta rellena con un mix de berries: arándanos, moras y frambuesas.</p>
+                  <p class="precio">$13.0000</p>
+               </div>
+            </a>
+            <button>Comprar</button>
+         </div>
+
+         <div class="card">
+            <a href="./pages/producto.html">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPouX8V81eW5j1OfS9h5NJ_-Iv06uQj1YGWpApXctaD252kHu99RCKp6lE_HhllbX-g2uTDbpZ5M35m-peCbKwH_Ty8SLBO30a0FtqPfk_A__sJsHquBqmIkiR5cqV8AtyU59OGoRBHjBpS-D62WPmg=w400-h320-s-no?authuser=0" class="card-img-top" alt="...">
+               <div class="item">
+                  <h3>Tarta de Ricota</h3>
+                  <p>Clásica Tarta de masa blanda, ricota fresca y cubierta con azucar impalpable</p>
+                  <p>$15.000</p>
+               </div>
+            </a>
+            <button >Comprar</button>
+         </div>
+
+         <div class="card">
+            <a href="./pages/producto.html">
+               <img src="https://lh3.googleusercontent.com/pw/AP1GczNq91kLB4DE_DD6KtDxba-BYfA0-ttEGzCthiEnnXWX-KGla9SoMN9FSAat45Ewlh1TesarIEC7jzHeYlTI_k-nmz6b1Ks_T1XCFF7m6eBBcvTmkzrcCN3Wcx47K7wPHILWNobB2adjlub7lgJ4QNSc=w400-h320-s-no?authuser=0" class="card-img-top" alt="...">
+               <div class="item">
+                  <h3>Torta Oreo</h3>
+                  <p class="card-text">Biscochuelo, Crema batida, chocolate rallado y muchas galletitas oreo</p>
+                  <p class="precio">$18.000</p>
+               </div>
+            </a>
+            <button >Comprar</button>
+         </div>
+
+         <div class="card">
+            <a href="./pages/producto.html">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPmlYuwh_ddIjwajYTUOjIjB29uuSYRfuAEylKrpCGnBkhQfLOcejG7itxD9JSS_wqPNfyeNL8ie2We6uwXAiNH5D-R1006lc49RfhXiqJdR9TDbzXdOWhYTlanfjuu38n4LrrAXhA8DkWPgmQb8NyE=w400-h320-s-no?authuser=0" class="card-img-top" alt="...">
+               <div class="item">
+                  <h3>CheeseCake</h3>
+                  <p class="card-text">Gelatina, Queso Crema, Masa filo; coronado con un colorido mix de frutos del bosque</p>
+                  <p class="precio">$20.000</p>
+               </div>
+            </a>
+            <button >Comprar</button>
+         </div>
+ 
+      </div>
+   </section>
+   <tr></tr>
+   <br>
+   <br>
+
+   <section>
+    <h1>Comentarios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Review</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Clarisa S</td>
+                <td>La mejor de todas!  siempre Excelente</td>
+                <td>★★★★★</td>
+            </tr>
+            <tr>
+                <td>Carlos Guissano</td>
+                <td>A tiempo... velocidad a full.  Gracias Sabry</td>
+                <td>★★★★☆</td>
+            </tr>
+            <tr>
+                <td>Sofia Hernández</td>
+                <td>Comimos el postre primero y nos quedamos sin hambre para el asado</td>
+                <td>★★★☆☆</td>
+            </tr>
+        </tbody>
+    </table>
+
+   </section>
+
+   <footer>
+      <div class="contact">
+         <p>Contactanos por Whatsapp</p>
+         <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <p>Dolce Sabry Delicatessen - Copyright 2024 - Argentina  </p>
+   </footer>
+
+   <script src="https://kit.fontawesome.com/e1f0fdc958.js" crossorigin="anonymous"></script>
+   <script src="./scripts/script.js"></script>
+</body>
+
+</html>
